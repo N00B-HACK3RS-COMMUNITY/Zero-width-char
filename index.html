@@ -25,7 +25,45 @@ body{
     /* center vetically */
     position: absolute;
     top: 50%;
-    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vh;
+    height: 75vh;
+    max-width: 400px;
+    max-height: 400px;
+    background: $bg-colour;
+    border: 1px solid $colour-negative;
+  }
+  &__text{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5vw;
+  text-transform: uppercase;
+  width: 100%;
+  color: $colour-negative;
+  
+  &--outline{
+    position: absolute;
+    z-index: 1;
+    background-clip: text;
+    -webkit-text-stroke: 1px $colour-negative;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.hscroll{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  transition: all 1s ease-in-out 0s;
+}
+
 </style>
 </head>
 <body>
